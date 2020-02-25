@@ -25,9 +25,30 @@ public class BinarySearchTree {
         return node;
     }
 
-    public Node search(int data){
+    public void search(int data){
 
-        return new Node(data);
+        root =  searchKey(root, data);
+        if(root != null){
+        System.out.println(root.key);}
+        else {
+            System.out.println(root);
+        }
 
+    }
+
+    private Node searchKey(Node root, int data) {
+
+        if(root == null || root.key == data){
+            return root;
+        }
+        else if(root.key > data){
+            return searchKey(root.left, data);
+        }
+        else if(root.key<data){
+            return searchKey(root.right, data);
+        }
+
+
+        return root;
     }
 }

@@ -13,6 +13,6 @@ public class Main {
         binarySearchTree.insertNode(19);
         binarySearchTree.insertNode(11);
 
-        binarySearchTree.search(17);
+        binarySearchTree.search(11);
     }
 }
